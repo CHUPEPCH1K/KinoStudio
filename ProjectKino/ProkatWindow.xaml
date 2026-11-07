@@ -1,0 +1,21 @@
+﻿<Window x:Class="ProjectKino.ProkatWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Прокат" Height="500" Width="900">
+    <Grid>
+        <DataGrid x:Name="ProkatList" Margin="20,70,20,70" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Код проката" Binding="{Binding КодПроката}" Width="100"/>
+                <DataGridTextColumn Header="Проект" Binding="{Binding ПроектNavigation.Название}" Width="200"/>
+                <DataGridTextColumn Header="Дата выхода" Binding="{Binding ДатаВыхода}" Width="120"/>
+                <DataGridTextColumn Header="Кинотеатры" Binding="{Binding КоличествоКинотеатров}" Width="120"/>
+                <DataGridTextColumn Header="Сборы" Binding="{Binding Сборы, StringFormat={}{0:C}}" Width="150"/>
+                <DataGridTextColumn Header="Рейтинг" Binding="{Binding РейтингЗрителей}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label Content="Прокат фильмов" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <Button x:Name="AddButton" Content="Добавить прокат" HorizontalAlignment="Center" Margin="0,0,0,20" VerticalAlignment="Bottom" Height="30" Width="200" Click="AddButton_Click"/>
+        <Button x:Name="ButtonBack" Content="Назад" HorizontalAlignment="Left" Margin="20,434,0,0" VerticalAlignment="Top" Height="30" Width="78" Click="ButtonBack_Click"/>
+    </Grid>
+</Window>

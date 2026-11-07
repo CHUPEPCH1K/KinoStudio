@@ -1,0 +1,25 @@
+﻿<Window x:Class="ProjectKino.AddProkatWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавление проката" Height="420" Width="350">
+    <Grid>
+        <Label Content="Новый прокат" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+
+        <Label Content="Проект:" HorizontalAlignment="Left" Margin="30,50,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CBProject" HorizontalAlignment="Left" Margin="30,75,0,0" VerticalAlignment="Top" Width="270" DisplayMemberPath="Название" SelectedValuePath="КодПроекта"/>
+
+        <Label Content="Дата выхода:" HorizontalAlignment="Left" Margin="30,110,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="DPDate" HorizontalAlignment="Left" Margin="30,135,0,0" VerticalAlignment="Top" Width="270"/>
+
+        <Label Content="Количество кинотеатров:" HorizontalAlignment="Left" Margin="30,170,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TBCount" HorizontalAlignment="Left" Margin="30,195,0,0" VerticalAlignment="Top" Width="270"/>
+
+        <Label Content="Сборы (руб):" HorizontalAlignment="Left" Margin="30,230,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TBEarnings" HorizontalAlignment="Left" Margin="30,255,0,0" VerticalAlignment="Top" Width="270"/>
+
+        <Label Content="Рейтинг (от 0 до 10):" HorizontalAlignment="Left" Margin="30,290,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TBRating" HorizontalAlignment="Left" Margin="30,315,0,0" VerticalAlignment="Top" Width="270"/>
+
+        <Button x:Name="ButtonSave" Content="Сохранить" HorizontalAlignment="Left" Margin="30,360,0,0" VerticalAlignment="Top" Width="270" Height="30" Click="ButtonSave_Click"/>
+    </Grid>
+</Window>

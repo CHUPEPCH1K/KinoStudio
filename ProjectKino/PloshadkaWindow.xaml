@@ -1,0 +1,24 @@
+﻿<Window x:Class="ProjectKino.PloshadkaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectKino"
+        mc:Ignorable="d"
+        Title="PloshadkaWindow" Height="465" Width="606">
+    <Grid>
+        <DataGrid x:Name="ListPloshadka" Margin="16,65,17,94" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Код площадки"  Width="100" Binding="{Binding КодСъёмочнойПлощадки}" />
+                <DataGridTextColumn Header="Адрес"  Width="100" Binding="{Binding Адрес}"/>
+                <DataGridTextColumn Header="Тип" Width="100" Binding="{Binding ТипПлощадкиNavigation.Наименование}"/>
+                <DataGridTextColumn Header="Стоимость аренды в день" Width="160" Binding="{Binding СтоимостьАрендыВДень}"/>
+                <DataGridTextColumn Header="Вместимость" Width="100" Binding="{Binding Вместимость}"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Label Content="Площадки" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <Button x:Name="ButtonAddPloshadka" Content="Добавить" HorizontalAlignment="Center" Margin="0,375,0,0" VerticalAlignment="Top" Height="25" Width="118" Click="ButtonAddPloshadka_Click"/>
+        <Button x:Name="ButtonBack" Content="Назад" HorizontalAlignment="Left" Margin="16,375,0,0" VerticalAlignment="Top" Height="25" Width="93" Click="ButtonBack_Click"/>
+    </Grid>
+</Window>

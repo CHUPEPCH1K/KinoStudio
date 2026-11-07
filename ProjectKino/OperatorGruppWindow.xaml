@@ -1,0 +1,21 @@
+﻿<Window x:Class="ProjectKino.OperatorGruppWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Съёмочные группы" Height="450" Width="850">
+    <Grid>
+        <DataGrid x:Name="GruppList" Margin="20,70,20,70" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Проект" Binding="{Binding СёмочнаяГруппаNavigation.ПроектГруппыNavigation.Название}" Width="250"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding СотрудникNavigation.Фамилия}" Width="150"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding СотрудникNavigation.Имя}" Width="150"/>
+                <!-- Вот здесь выводим специализацию через навигационное свойство сотрудника -->
+                <DataGridTextColumn Header="Специализация (Роль)" Binding="{Binding СотрудникNavigation.СпециализацияNavigation.Наименование}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label Content="Съёмочные группы (Состав проектов)" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <Button x:Name="AddButton" Content="Добавить сотрудника в проект" HorizontalAlignment="Center" Margin="0,0,0,20" VerticalAlignment="Bottom" Height="30" Width="250" Click="AddButton_Click"/>
+        <Button x:Name="ButtonBack" Content="Назад" HorizontalAlignment="Left" Margin="20,384,0,0" VerticalAlignment="Top" Height="30" Width="115" Click="ButtonBack_Click"/>
+
+    </Grid>
+</Window>

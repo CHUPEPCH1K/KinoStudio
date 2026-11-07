@@ -1,0 +1,17 @@
+﻿<Window x:Class="ProjectKino.AddGruppWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавление в группу" Height="300" Width="350">
+    <Grid>
+        <Label Content="Добавление в съёмочную группу" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+
+        <Label Content="Проект:" HorizontalAlignment="Left" Margin="30,50,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CBProject" HorizontalAlignment="Left" Margin="30,75,0,0" VerticalAlignment="Top" Width="270" DisplayMemberPath="Название" SelectedValuePath="КодПроекта"/>
+
+        <Label Content="Сотрудник:" HorizontalAlignment="Left" Margin="30,115,0,0" VerticalAlignment="Top"/>
+        <!-- Отображаем Фамилию и Имя, чтобы было понятно, кого выбираешь -->
+        <ComboBox x:Name="CBEmployee" HorizontalAlignment="Left" Margin="30,140,0,0" VerticalAlignment="Top" Width="270" DisplayMemberPath="Фамилия" SelectedValuePath="ТабельныйНомер"/>
+
+        <Button x:Name="ButtonSave" Content="Добавить" HorizontalAlignment="Left" Margin="30,200,0,0" VerticalAlignment="Top" Width="270" Height="30" Click="ButtonSave_Click"/>
+    </Grid>
+</Window>
